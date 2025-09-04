@@ -105,19 +105,26 @@ int main(void)
   while (1)
   {
     /* USER CODE END WHILE */
+	// check if switch is pressed
 	  if((HAL_GPIO_ReadPin(GPIOC, GPIO_PIN_13)) == GPIO_PIN_RESET)
 	  {
+		  // Wait till Switch relased
 		  while((HAL_GPIO_ReadPin(GPIOC, GPIO_PIN_13)) == GPIO_PIN_SET);
+		  // Delay
 		  HAL_Delay(500);
+		  // Counter to increment
 		  pinState++ ;
-
+		  // check if pin count value is 1 to on LED
 		  if(pinState == 1)
 		        {
+			  // ON the LED and display message
 		  	 	HAL_GPIO_WritePin(GPIOA, GPIO_PIN_5, GPIO_PIN_SET);
 		  	 	printf("Switch Pressed \n LED ON \n");
-		  	  }
-		  	  else if(pinState == 2)
-		  	  {
+		  }
+		  // check if pin count value is 2 to off LED
+		  else if(pinState == 2)
+		  {
+		  		// OFF the LED and display message
 		  	 	HAL_GPIO_WritePin(GPIOA, GPIO_PIN_5, GPIO_PIN_RESET);
 		  	 	printf("Switch Released \n LED OFF \n");
 		  	 	pinState = 0;
