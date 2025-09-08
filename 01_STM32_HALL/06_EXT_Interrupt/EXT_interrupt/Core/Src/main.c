@@ -92,7 +92,10 @@ void EXT_Interrupt_GPIO_PC13_init(void)
 	/* Set GPIO speed to low frequency */
 	GPIO_StructInit.Speed = GPIO_SPEED_FREQ_LOW;
 	/* Initialize GPIOA (LED_PORT) with above configuration */
-	HAL_GPIO_Init(LED_PORT, &GPIO_StructInit);
+	HAL_GPIO_Init(LED_PORT, &GPIO_StructInit);	
+        /*configure  and enable External Interrupt */
+	HAL_NVIC_SetPriority(EXTI15_10_IRQn, 0, 0);
+	HAL_NVIC_EnableIRQ(EXTI15_10_IRQn);
 
 }
 
