@@ -1,0 +1,10 @@
+../Driver/Src/STM32Lxx_gpio_driver.c:45:6:GPIO_PeriClockControl	19
+../Driver/Src/STM32Lxx_gpio_driver.c:139:6:GPIO_Init	3
+../Driver/Src/STM32Lxx_gpio_driver.c:186:6:GPIO_DeInit	9
+../Driver/Src/STM32Lxx_gpio_driver.c:232:9:GPIO_ReadFromInputPin	1
+../Driver/Src/STM32Lxx_gpio_driver.c:244:10:GPIO_ReadFromInputPort	1
+../Driver/Src/STM32Lxx_gpio_driver.c:256:6:GPIO_WriteToOutputPin	3
+../Driver/Src/STM32Lxx_gpio_driver.c:273:6:GPIO_WriteToOutputPort	1
+../Driver/Src/STM32Lxx_gpio_driver.c:283:6:GPIO_TogglePin	1
+../Driver/Src/STM32Lxx_gpio_driver.c:294:6:GPIO_IRQConfig	1
+../Driver/Src/STM32Lxx_gpio_driver.c:305:6:GPIO_IRQHandler	1
