@@ -60,8 +60,8 @@ all: main-build
 main-build: push_button.elf secondary-outputs
 
 # Tool invocations
-push_button.elf push_button.map: $(OBJS) $(USER_OBJS) D:\BitSilica\STM_PRO\push_button\STM32L476RGTX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
-	arm-none-eabi-gcc -o "push_button.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m4 -T"D:\BitSilica\STM_PRO\push_button\STM32L476RGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="push_button.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+push_button.elf push_button.map: $(OBJS) $(USER_OBJS) D:\BitSilica\3_Github_repo\06_STM32\01_STM32_HALL\02_Push_Button\push_button\STM32L476RGTX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
+	arm-none-eabi-gcc -o "push_button.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m4 -T"D:\BitSilica\3_Github_repo\06_STM32\01_STM32_HALL\02_Push_Button\push_button\STM32L476RGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="push_button.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
 	@echo 'Finished building target: $@'
 	@echo ' '
 
