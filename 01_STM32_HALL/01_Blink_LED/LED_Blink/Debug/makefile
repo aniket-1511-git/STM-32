@@ -60,8 +60,8 @@ all: main-build
 main-build: LED_Blink.elf secondary-outputs
 
 # Tool invocations
-LED_Blink.elf LED_Blink.map: $(OBJS) $(USER_OBJS) D:\BitSilica\3_Github_repo\06_STM32\01_Blink_LED\LED_Blink\STM32L476RGTX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
-	arm-none-eabi-gcc -o "LED_Blink.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m4 -T"D:\BitSilica\3_Github_repo\06_STM32\01_Blink_LED\LED_Blink\STM32L476RGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="LED_Blink.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+LED_Blink.elf LED_Blink.map: $(OBJS) $(USER_OBJS) D:\BitSilica\3_Github_repo\06_STM32\01_STM32_HALL\01_Blink_LED\LED_Blink\STM32L476RGTX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
+	arm-none-eabi-gcc -o "LED_Blink.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m4 -T"D:\BitSilica\3_Github_repo\06_STM32\01_STM32_HALL\01_Blink_LED\LED_Blink\STM32L476RGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="LED_Blink.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
 	@echo 'Finished building target: $@'
 	@echo ' '
 
